@@ -1,6 +1,11 @@
 package Film;
 
-public class Film {
+/**
+ * 
+ * @author Amy_oyzl
+ *
+ */
+public class Film implements Comparable<Film> {
 	private String title;
 	private int year;
 	private double score;
@@ -32,5 +37,10 @@ public class Film {
 	public void print() {
 		System.out.println(title + "   " + year + "   " + score);
 	}
-	
+
+	@Override
+	public int compareTo(Film o) {
+		return year-o.year;
+	}
+
 }

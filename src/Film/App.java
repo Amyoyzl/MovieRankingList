@@ -2,7 +2,6 @@ package Film;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -70,6 +69,7 @@ public class App {
 			System.out.println("暂无内容！");
 			return;
 		}
+		Collections.sort(films,new ScoreCompare());
 		System.out.println("豆瓣评分");
 		for (Film e : films) {
 			System.out.println(e.getTitle() + ":" + e.getScore());
@@ -81,6 +81,7 @@ public class App {
 			System.out.println("暂无内容！");
 			return;
 		}
+		Collections.sort(films);
 		System.out.println("上映时间");
 		for (Film e : films) {
 			System.out.println(e.getTitle() + ":" + e.getYear());
